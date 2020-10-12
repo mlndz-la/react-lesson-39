@@ -1,17 +1,19 @@
 import React from 'react';
+import CounterFunction from './class-component/CounterClass';
+import CounterClass from './functional-component/CounterFunction';
+import ClockClass from './class-component/ClockClass';
+import ClockFunction from './functional-component/ClockFunction'
 
-import Navbar from './nav/Navbar';
-import Body from './body/Body';
-import Footer from './footer/Footer';
-
-import './App.css';
-
-const App = () => {
+function App() {
   return (
+    // * Comment out all but one component
     <div>
-      <Navbar />
-      <Body />
-      <Footer />
+      {/* Class components */}
+      <CounterClass />
+      <ClockClass />
+      {/* Functional Components */}
+      <CounterFunction />
+      <ClockFunction />
     </div>
   );
 }
