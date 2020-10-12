@@ -6,14 +6,14 @@ import ClockFunction from './functional-component/ClockFunction'
 
 function App() {
   return (
-    // * Comment out all but one component
+    // * uncomment one at a time
     <div>
       {/* Class components */}
-      <CounterClass />
-      <ClockClass />
+      {/* <CounterClass /> */}
+      {/* <ClockClass /> */}
       {/* Functional Components */}
-      <CounterFunction />
-      <ClockFunction />
+      {/* <CounterFunction /> */}
+      {/* <ClockFunction /> */}
     </div>
   );
 }
