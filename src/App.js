@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { apiStatus, useAPI } from './utils/useApi';
+import { useAPI } from './utils/useApi';
 import './AppForAll.css';
 
 import GetGiphy from './presentational-component/GetGiphy';
@@ -12,14 +12,16 @@ function App() {
   const [ gifs, setGifs ] = useState([]);
 
   useEffect(() => {
-    console.log('useEffect')
-  }, [])
+    setGifs(data)
+    console.log(data)
+  })
 
   return (
     <div className='app-container'>
       <GetGiphy
         setQuery={setQuery}
         fetchData={fetchData}
+        test={data}
       />
       <ShowGifs
         gifs={gifs}
