@@ -1,7 +1,5 @@
 *, *::before, *::after { 
   box-sizing: border-box;
-}
-
-body {
-  margin: 0 auto;
+  margin: 0 0;
+  padding: 0;
 }
