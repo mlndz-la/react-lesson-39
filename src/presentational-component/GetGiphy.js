@@ -7,7 +7,7 @@ const GetGiphy = (props) => {
   const onClickHandle = () => {
     fetchData(`https://api.giphy.com/v1/gifs/search?api_key=phjtiTpDbOexS7SoP426Sbh47lOIgEJc&q=${query}&limit=50&offset=0&rating=pg-13&lang=en`);
     setQuery('');
-  }
+  };
 
   return (
     <div>
@@ -25,8 +25,10 @@ const GetGiphy = (props) => {
           type='text'
           value={query}
           onChange={(e) => {
+            console.log(e.target.value);
+
             if (e.keyCode === 13) {
-              onClickHandle()
+              onClickHandle();
             } else {
               setQuery(e.target.value);
             }

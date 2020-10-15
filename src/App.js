@@ -18,6 +18,6 @@ function App() {
       {response.isDone && <ShowGifs data={response.data.data}/>}
     </div>
   );
-}
+};
 
 export default App;
