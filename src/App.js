@@ -8,7 +8,6 @@ import ShowGifs from './presentational-component/ShowGifs';
 function App() {
   const [ response, fetchData ] = useAPI();
   const [ query, setQuery ] = useState('');
-
   return (
     <div className='app-container'>
       <GetGiphy
