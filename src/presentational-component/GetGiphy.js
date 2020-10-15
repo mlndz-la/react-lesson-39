@@ -26,7 +26,6 @@ const GetGiphy = (props) => {
           value={query}
           onChange={(e) => {
             console.log(e.target.value);
-
             if (e.keyCode === 13) {
               onClickHandle();
             } else {
