@@ -8,26 +8,29 @@ export const apiStatus = {
 
 const updateState = (state, action) => {
   switch (action.type) {
-    case apiStatus.LOADING:
+    case apiStatus.LOADING: {
       return {
         ...state,
         status: apiStatus.LOADING,
       };
-    case apiStatus.SUCCESS:
+    }
+    case apiStatus.SUCCESS: {
       return {
         status: apiStatus.SUCCESS,
         data: action.payload,
         isDone: true,
       };
-    case apiStatus.FAILED:
+    }
+    case apiStatus.FAILED: {
       return {
         ...state,
         status: apiStatus.FAILED,
         isDone: true,
       };
+    }
     default:
       return state;
-  };
+  }
 };
 
 export const useAPI = () => {
